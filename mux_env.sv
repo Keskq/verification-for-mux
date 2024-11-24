@@ -30,9 +30,9 @@ class mux_env extends uvm_env;
   function void connect_phase(uvm_phase phase);
     super.connect_phase(phase);
     agent_h.monitor_h.ap_mon.connect(coverage_h.analysis_export);
-	  // connection to aport_drv and aport_mon in scoreboard
-  	agent_h.monitor_h.ap_mon.connect(scoreboard_h.aport_mon);
-	  agent_h.driver_h.drv2sb.connect(scoreboard_h.aport_drv);
+    // connection to aport_drv and aport_mon in scoreboard
+    agent_h.monitor_h.ap_mon.connect(scoreboard_h.aport_mon);
+    agent_h.driver_h.drv2sb.connect(scoreboard_h.aport_drv);
   endfunction
   //----------------------------------------------------------------------------
 endclass:mux_env
